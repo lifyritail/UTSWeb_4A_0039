@@ -107,4 +107,41 @@ $(document).ready(function () {
 
     updateQuoteSummary();
 
+    const $contactMessage = $("#contactMessage");
+
+    const showContactMessage = (status, message) => {
+        $contactMessage
+            .removeClass("d-none alert-success alert-danger")
+            .addClass(status === "error" ? "alert-danger" : "alert-success")
+            .text(message);
+    };
+
+    const isValidEmail = (value) => {
+        const atIndex = value.indexOf("@");
+        const dotIndex = value.lastIndexOf(".");
+
+        return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < value.length - 1;
+    };
+
+    $("#contactForm").submit(function (e) {
+        e.preventDefault();
+
+        const nama = $("#nama").val().trim();
+        const email = $("#email").val().trim();
+        const pesan = $("#pesan").val().trim();
+
+        if (!nama || !email || !pesan) {
+            showContactMessage("error", "Semua field harus diisi sebelum mengirim pesan.");
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            showContactMessage("error", "Format email tidak valid. Silakan periksa kembali.");
+            return;
+        }
+
+        showContactMessage("success", `Terima kasih ${nama}! Pesan Anda telah diterima dan tim kami akan menghubungi kembali melalui email.`);
+        $("#contactForm")[0].reset();
+    });
+
 });
