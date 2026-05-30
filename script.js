@@ -69,22 +69,6 @@ $(document).ready(function () {
         }
     });
 
-    $(".service-card").first().addClass("is-active").trigger("click");
-
-    $(".counter").each(function () {
-        let target = $(this).data("target");
-
-        $(this).prop("Counter", 0).animate({
-            Counter: target
-        }, {
-            duration: 3000,
-            easing: "swing",
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-
     const updateQuoteSummary = () => {
         const selectedService = $("#serviceSelect").val();
         const quantity = Number($("#quantityInput").val()) || 1;
@@ -107,10 +91,8 @@ $(document).ready(function () {
         updateQuoteSummary();
     });
 
-    $("#serviceSelect, #quantityInput, #deliverySelect, #giftNote").on("input change", function () {
-        updateQuoteSummary();
-    });
-
+    $(".service-card").first().addClass("is-active").trigger("click");
+    updateGalleryStatus();
     updateQuoteSummary();
 
     const $contactMessage = $("#contactMessage");
@@ -148,6 +130,24 @@ $(document).ready(function () {
 
         showContactMessage("success", `Terima kasih ${nama}! Pesan Anda telah diterima dan tim kami akan menghubungi kembali melalui email.`);
         $("#contactForm")[0].reset();
+    });
+
+    $(".counter").each(function () {
+        let target = $(this).data("target");
+
+        $(this).prop("Counter", 0).animate({
+            Counter: target
+        }, {
+            duration: 3000,
+            easing: "swing",
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
+    $("#serviceSelect, #quantityInput, #deliverySelect, #giftNote").on("input change", function () {
+        updateQuoteSummary();
     });
 
 });
