@@ -40,3 +40,54 @@ body {
     margin-left: 10px;
     font-weight: 500;
 }
+
+.hero-section {
+    padding: 120px 0 40px;
+}
+
+.hero-content {
+    padding-top: 24px;
+}
+
+.eyebrow, .section-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.28rem 0.72rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: rgba(127,85,57,0.12);
+    color: var(--brand-dark);
+    margin-bottom: 1rem;
+}
+
+.hero-copy h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 800;
+    line-height: .9;
+    margin-bottom: 1rem;
+    color: var(--brand-dark);
+}
+
+.hero-copy h2 {
+    font-size: 1.35rem;
+    color: var(--brand);
+    margin-bottom: 1rem;
+}
+
+.hero-copy .lead {
+    max-width: 42rem;
+    color: var(--text-muted);
+    font-size: 1.03rem;
+    line-height: 1.7;
+}
+
+.hero-main-image {
+    width: 100%;
+    max-height: 74vh;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+}
