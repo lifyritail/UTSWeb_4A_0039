@@ -415,3 +415,71 @@ html { scroll-behavior: smooth; }
     border: 1px solid rgba(127,85,57,0.2);
     padding: 0.72rem 0.88rem;
 }
+
+.footer-section {
+    background: #5e3d2b;
+    color: #fff;
+    padding-top: 74px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.payment-logo-strip {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-top: 26px;
+    padding: 18px 12px 0;
+}
+
+.payment-title {
+    margin: 0 0 12px;
+    text-align: center;
+    color: rgba(255,255,255,0.78);
+    font-size: 0.84rem;
+}
+
+.payment-logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.payment-logo-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.98);
+    border-radius: 999px;
+    padding: 10px 12px;
+    min-height: 44px;
+    border: 1px solid rgba(94,61,43,0.15);
+}
+
+.payment-logo-item img {
+    max-height: 36px;
+    max-width: 104px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.18));
+}
+
+.copyright {
+    margin-top: 24px;
+    background: #2f1f18;
+    text-align: center;
+    padding: 16px;
+    color: rgba(255,255,255,0.75);
+}
