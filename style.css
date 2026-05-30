@@ -291,3 +291,22 @@ html { scroll-behavior: smooth; }
     font-weight: 700;
     color: var(--brand-dark);
 }
+
+.process-card {
+    border-radius: 26px;
+    padding: 1.4rem;
+    height: 100%;
+}
+
+.process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 999px;
+    background: var(--brand-dark);
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 0.9rem;
+}
