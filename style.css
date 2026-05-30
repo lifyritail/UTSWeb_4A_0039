@@ -21,3 +21,22 @@ body {
         var(--bg-main);
     color: var(--text-main);
 }
+
+.custom-navbar {
+    background: rgba(255,253,249,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(127,85,57,0.12);
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+}
+
+.nav-link {
+    color: var(--text-main);
+    margin-left: 10px;
+    font-weight: 500;
+}
