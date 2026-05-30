@@ -27,6 +27,12 @@ $(document).ready(function () {
         }
     };
 
+    $("#darkModeBtn").click(function () {
+        $("body").toggleClass("dark-mode");
+        const active = $("body").hasClass("dark-mode");
+        $(this).text(active ? "Mode Terang" : "Mode Gelap");
+    });
+
     const updateGalleryStatus = () => {
         const activeFilter = $(".filterBtn.active").attr("data-filter");
         const keyword = $("#gallerySearch").val().toLowerCase().trim();
