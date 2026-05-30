@@ -580,3 +580,15 @@ html { scroll-behavior: smooth; }
     background: linear-gradient(135deg, #f8c7af, #b5724d);
     color: #2b1d18;
 }
+
+@media (max-width: 992px) {
+    .hero-section { padding-top: 96px; }
+    .hero-copy h1 { font-size: 3.4rem; }
+    .hero-main-image { max-height: 56vh; }
+}
+
+@media (max-width: 768px) {
+    .hero-actions { flex-direction: column; }
+    .hero-highlights { display: grid; grid-template-columns: 1fr; }
+    .gallery-toolbar .col-lg-6 { margin-bottom: 0.75rem; }
+}
