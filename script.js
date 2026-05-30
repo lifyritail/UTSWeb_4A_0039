@@ -79,4 +79,32 @@ $(document).ready(function () {
         });
     });
 
+    const updateQuoteSummary = () => {
+        const selectedService = $("#serviceSelect").val();
+        const quantity = Number($("#quantityInput").val()) || 1;
+        const deliveryCost = Number($("#deliverySelect").val());
+        const price = Number($("#serviceSelect option:selected").data("price"));
+        const total = (price * quantity) + deliveryCost;
+        const giftNote = $("#giftNote").val() || "-";
+
+        $("#quoteTotal").text(new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            maximumFractionDigits: 0
+        }).format(total));
+
+        $("#quoteDetail").text(`${quantity}x ${selectedService}, pengiriman ${$("#deliverySelect option:selected").text()}, catatan hadiah: ${giftNote}`);
+    };
+
+    $("#quoteForm").on("submit", function (e) {
+        e.preventDefault();
+        updateQuoteSummary();
+    });
+
+    $("#serviceSelect, #quantityInput, #deliverySelect, #giftNote").on("input change", function () {
+        updateQuoteSummary();
+    });
+
+    updateQuoteSummary();
+
 });
