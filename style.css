@@ -483,3 +483,100 @@ html { scroll-behavior: smooth; }
     padding: 16px;
     color: rgba(255,255,255,0.75);
 }
+
+.dark-mode {
+    background: #1d1615;
+    color: #fff;
+}
+
+.dark-mode .custom-navbar,
+.dark-mode .service-card,
+.dark-mode .process-card,
+.dark-mode .gallery-card,
+.dark-mode .estimate-card,
+.dark-mode .contact-form,
+.dark-mode .counter-box,
+.dark-mode .service-detail-panel,
+.dark-mode .quote-summary,
+.dark-mode .quote-note,
+.dark-mode .about-point,
+.dark-mode .contact-item {
+    background: rgba(42,31,28,0.88);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.dark-mode body,
+.dark-mode .hero-section,
+.dark-mode .estimation-section {
+    background: #1d1615;
+}
+
+.dark-mode .hero-copy h1,
+.dark-mode .hero-copy h2,
+.dark-mode .about-section h2,
+.dark-mode .section-heading h2,
+.dark-mode .contact-section h2,
+.dark-mode .estimation-section h2,
+.dark-mode .contact-item,
+.dark-mode .navbar-brand,
+.dark-mode .hero-highlights span,
+.dark-mode .detail-chip,
+.dark-mode .counter-box h2,
+.dark-mode .counter-box p,
+.dark-mode .about-point,
+.dark-mode .about-point span {
+    color: #fff;
+}
+
+.dark-mode .nav-link,
+.dark-mode .footer-links a,
+.dark-mode .hero-copy .lead,
+.dark-mode .about-section p,
+.dark-mode .section-heading p,
+.dark-mode .contact-section p,
+.dark-mode .estimation-section p,
+.dark-mode .service-card p,
+.dark-mode .process-card p,
+.dark-mode .gallery-info p,
+.dark-mode .quote-note,
+.dark-mode .quote-summary {
+    color: rgba(255,255,255,0.78);
+}
+
+.dark-mode .btn-secondary-brand {
+    color: #fff;
+    background: rgba(255,255,255,0.12);
+}
+
+.dark-mode .filter-btn-group .filterBtn,
+.dark-mode #gallerySearch,
+.dark-mode .contact-form .form-control,
+.dark-mode .contact-form .form-select,
+.dark-mode .estimate-card .form-control,
+.dark-mode .estimate-card .form-select {
+    background: #2a1f1d;
+    color: #fff;
+    border-color: rgba(255,255,255,0.1);
+}
+
+.dark-mode #gallerySearch::placeholder {
+    color: rgba(255,255,255,0.55);
+}
+
+.dark-mode #gallerySearch::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.55);
+}
+
+.dark-mode #gallerySearch::-moz-placeholder {
+    color: rgba(255,255,255,0.55);
+    opacity: 1;
+}
+
+.dark-mode #gallerySearch {
+    caret-color: #fff;
+}
+
+.dark-mode .btn-primary-brand {
+    background: linear-gradient(135deg, #f8c7af, #b5724d);
+    color: #2b1d18;
+}
