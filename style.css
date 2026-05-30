@@ -354,3 +354,32 @@ html { scroll-behavior: smooth; }
     font-weight: 700;
     margin-bottom: 0.3rem;
 }
+
+.estimation-section {
+    background: linear-gradient(180deg, rgba(255,243,234,0.8), rgba(255,255,255,0.4));
+}
+
+.estimate-card {
+    border-radius: 30px;
+    padding: 1.5rem;
+}
+
+.quote-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(127,85,57,0.18);
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+.quote-summary {
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    background: rgba(127,85,57,0.1);
+    color: var(--brand-dark);
+    font-weight: 600;
+}
