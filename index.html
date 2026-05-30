@@ -415,5 +415,64 @@
         </div>
     </section>
 
+    <section id="estimasi" class="section-padding estimation-section">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-5">
+                    <p class="section-tag">Estimasi pemesanan</p>
+                    <h2>Hitung kira-kira budget bouquet yang cocok</h2>
+                    <p>Kalau masih bingung dengan pilihan, kalkulator ini bisa membantu melihat perkiraan biaya berdasarkan jenis bouquet, jumlah, dan opsi pengiriman.</p>
+                    <div class="quote-note">
+                        <i class="bi bi-info-circle"></i>
+                        <span>Angka di sini hanya perkiraan awal, karena pilihan bunga dan styling bisa menambah detail.</span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="estimate-card">
+                        <form id="quoteForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="serviceSelect" class="form-label">Pilih layanan</label>
+                                    <select class="form-select" id="serviceSelect">
+                                        <option value="Hand Bouquet" data-price="30000" data-duration="2-3 hari kerja">Hand Bouquet</option>
+                                        <option value="Flower Box" data-price="420000" data-duration="3-4 hari kerja">Flower Box</option>
+                                        <option value="Graduation Bouquet" data-price="500000" data-duration="3-5 hari kerja">Graduation Bouquet</option>
+                                        <option value="Custom Bouquet" data-price="650000" data-duration="4-6 hari kerja">Custom Bouquet</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="quantityInput" class="form-label">Jumlah</label>
+                                    <input type="number" class="form-control" id="quantityInput" min="1" value="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="deliverySelect" class="form-label">Tipe pengiriman</label>
+                                    <select class="form-select" id="deliverySelect">
+                                        <option value="0">Pick up studio</option>
+                                        <option value="50000">Same day delivery</option>
+                                        <option value="80000">Express delivery</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="giftNote" class="form-label">Catatan hadiah</label>
+                                    <input type="text" class="form-control" id="giftNote" placeholder="Happy anniversary">
+                                </div>
+                            </div>
+                            <div class="mt-4 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                                <div>
+                                    <p class="mb-1 fw-semibold">Estimasi total</p>
+                                    <h3 id="quoteTotal" class="mb-0">Rp 30.000</h3>
+                                </div>
+                                <button type="submit" class="btn btn-primary-brand">Hitung ulang</button>
+                            </div>
+                        </form>
+                        <div class="quote-summary mt-3" id="quoteSummary">
+                            <span id="quoteDetail">1x Hand Bouquet, pengiriman pick up, catatan hadiah: -</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
