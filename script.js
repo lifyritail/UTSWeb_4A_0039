@@ -27,6 +27,27 @@ $(document).ready(function () {
         }
     };
 
+    const updateGalleryStatus = () => {
+        const activeFilter = $(".filterBtn.active").attr("data-filter");
+        const keyword = $("#gallerySearch").val().toLowerCase().trim();
+
+        $(".gallery-item").each(function () {
+            const matchesFilter = activeFilter === "all" || $(this).hasClass(activeFilter);
+            const matchesKeyword = keyword === "" || $(this).attr("data-name").toLowerCase().includes(keyword);
+            $(this).toggle(matchesFilter && matchesKeyword);
+        });
+    };
+
+    $(".filterBtn").click(function () {
+        $(".filterBtn").removeClass("active");
+        $(this).addClass("active");
+        updateGalleryStatus();
+    });
+
+    $("#gallerySearch").on("keyup input", function () {
+        updateGalleryStatus();
+    });
+
     $(".service-card").click(function () {
         $(".service-card").removeClass("is-active");
         $(this).addClass("is-active");
