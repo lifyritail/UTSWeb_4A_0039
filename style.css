@@ -383,3 +383,35 @@ html { scroll-behavior: smooth; }
     color: var(--brand-dark);
     font-weight: 600;
 }
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 999px;
+    padding: 0.7rem 0.8rem;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(127,85,57,0.16);
+    color: var(--text-main);
+}
+
+.contact-form {
+    border-radius: 30px;
+    padding: 1.5rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select,
+.estimate-card .form-control,
+.estimate-card .form-select {
+    border-radius: 12px;
+    border: 1px solid rgba(127,85,57,0.2);
+    padding: 0.72rem 0.88rem;
+}
