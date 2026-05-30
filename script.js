@@ -1,6 +1,49 @@
 $(document).ready(function () {
 
-    // animasi counter angka
+    const serviceDetails = {
+        "Hand Bouquet": {
+            title: "Hand Bouquet",
+            desc: "Rangkaian tangan dengan kombinasi bunga segar dan ribbon sederhana, cocok untuk hadiah personal atau acara kecil.",
+            price: "Mulai harga 30k",
+            duration: "2-3 hari kerja"
+        },
+        "Flower Box": {
+            title: "Flower Box",
+            desc: "Box bouquet dengan tampilan rapi dan praktis, cocok kalau ingin hadiah yang langsung bisa diberikan tanpa banyak styling.",
+            price: "Mulai Rp 420k",
+            duration: "3-4 hari kerja"
+        },
+        "Graduation Bouquet": {
+            title: "Graduation Bouquet",
+            desc: "Bouquet untuk momen kelulusan dengan warna yang lebih terang dan tampilan yang tetap mudah dipresentasikan.",
+            price: "Mulai Rp 500k",
+            duration: "3-5 hari kerja"
+        },
+        "Custom Bouquet": {
+            title: "Custom Bouquet",
+            desc: "Desain sesuai preferensi warna, jumlah bunga, dan tujuan hadiah, jadi lebih spesifik untuk kebutuhan tertentu.",
+            price: "Mulai Rp 650k",
+            duration: "4-6 hari kerja"
+        }
+    };
+
+    $(".service-card").click(function () {
+        $(".service-card").removeClass("is-active");
+        $(this).addClass("is-active");
+
+        const serviceName = $(this).find("h3").text();
+        const detail = serviceDetails[serviceName];
+
+        if (detail) {
+            $("#detailTitle").text(detail.title);
+            $("#detailDesc").text(detail.desc);
+            $("#detailPrice").text(detail.price);
+            $("#detailDuration").text(detail.duration);
+        }
+    });
+
+    $(".service-card").first().addClass("is-active").trigger("click");
+
     $(".counter").each(function () {
         let target = $(this).data("target");
 
